@@ -1,0 +1,53 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title style="font-weight: bolder">Profile</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <div class="class1" *ngFor="let item of items">
+    <div style="padding-left: 10px;">
+        <br><br>
+
+        <ion-tab-button (click)="openActionsheet()">
+          <ion-icon name="camera-outline"></ion-icon>
+          <ion-label>Update Profile Picture</ion-label>
+        </ion-tab-button>       
+        <br><br>
+
+        <ion-toolbar color="primary">
+          <ion-title class="line1">First Name</ion-title>
+        </ion-toolbar>
+
+        <ion-toolbar class="line2" color="primary">
+          <ion-title style="font-weight:800">{{item.fname}}</ion-title>
+        </ion-toolbar><br>
+
+        <ion-toolbar color="primary">
+          <ion-title class="line1">Last Name</ion-title>
+        </ion-toolbar>
+
+        <ion-toolbar class="line2" color="primary">
+          <ion-title style="font-weight:800">{{item.lname}}</ion-title>
+        </ion-toolbar><br>
+
+        <ion-toolbar color="primary">
+          <ion-title class="line1">Mobile Number</ion-title>
+        </ion-toolbar>
+
+        <ion-toolbar class="line2" color="primary">
+          <ion-title style="font-weight:800">{{item.phone}}</ion-title>
+        </ion-toolbar><br>
+    </div>
+  </div>
+  <ion-fab vertical="bottom" horizontal="start" slot="fixed" (click)="Edit()">
+    <ion-fab-button color="primary">
+      <ion-icon name="create-sharp"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+  
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed" (click)="SignOut()">
+    <ion-fab-button color="primary">
+      <ion-icon name="log-in-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

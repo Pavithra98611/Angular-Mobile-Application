@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <ion-title style="font-weight: bolder">Add Products</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <div class="class1">
+    <div class="imagestyle" [style.backgroundImage]="'url(' + downloadUrl + ')'">
+    </div>
+    <ion-button expand="block" (click)="openActionsheet()" fill="clear" size="medium">Upload Image
+    </ion-button>
+    <div *ngIf="percentage | async as pct">
+      Progress: {{ pct | number }}%
+      <ion-progress-bar value="{{ pct / 100 }}"></ion-progress-bar>
+    </div>
+      <div class="div_form">
+        <form [formGroup]="listing_form">   
+          <ion-label>About Product : </ion-label><br><br>
+          <ion-input  style="background-color: grey" type="text"  formControlName="title" placeholder="Title"></ion-input>
+          <ion-textarea  style="background-color: grey" rows="3" formControlName="description"  placeholder="Description"></ion-textarea>
+          <ion-input  style="background-color: grey" type="number"  formControlName="price" placeholder="Price"></ion-input>
+          <ion-button (click)="onClickSave()"  expand="block">Save</ion-button>
+      </form>
+      </div>
+  </div>
+</ion-content>

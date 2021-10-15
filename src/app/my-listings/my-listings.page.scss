@@ -1,0 +1,83 @@
+.class1{
+    width: 100%;
+    padding: 20px;
+
+    ion-label {
+        display: block;
+    }
+    .header_lbl{
+        font-weight: 600;
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    .class2{
+
+        border-radius: 10px;
+        box-shadow: 0px 3px 6px rgba(204, 193, 193, 0.986);
+        margin-top: 15px;
+        position: relative;
+
+
+        padding-top:10px;
+        padding-left:10px;
+
+        display: flex;
+        flex-direction: row;
+        height: 150px;
+        overflow-y: scroll;
+
+        .tymbooker_image{
+            height: 100px;
+            width: 100px;
+            background-position: left;
+            background-repeat: no-repeat;
+            background-size: cover;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+        }
+
+        .tymbooker_name{
+            color: var(--ion-color-primary);
+            font-size: 18px;
+            font-weight: 600;
+        }
+        .date{
+            font-size: 16px;
+        }
+        .pending{
+            color: #f05e23;
+            font-weight: 600;
+        }
+        .accepted{
+            color: green;
+            font-weight: 600;
+        }
+        .canceled{
+            color: red;
+            font-weight: 600;
+        }
+        .new{
+            color: var(--ion-color-primary);
+            font-weight: 600;
+        }
+        .price{
+            position: absolute;
+            right: 0;
+            top: 0;
+            background: var(--ion-color-primary);
+            padding: 5px 10px;
+            color: white;
+            font-weight: 600;
+            border-bottom-left-radius: 10px;
+            border-top-right-radius: 10px;         
+        }
+    }
+
+}
+.ioncontent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+  }
